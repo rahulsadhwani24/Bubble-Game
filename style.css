@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+:root{
+    --color-one: #8174A0;
+    --color-two: #D9DFC6;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.Game{
+    background-color: var(--color-one);
+    height: 75vh;
+    width: 75vw;
+    position: relative;
+}
+
+.start_end{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+}
+
+.controls{
+    background-color: #3A3960;
+    height: 15%;
+    display: flex;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.hint, .counter, .score{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:  clamp(.4rem, 2.5vw, .6rem);
+    user-select: none;
+    font-size: clamp(.6rem, 2.5vw, 1rem);
+}
+
+.textBox{
+    background-color: var(--color-two);
+    padding:  clamp(6px, .7vw, .2rem) clamp(.4rem, 3vw, 1rem);
+    border-radius: 10px;
+    color: #000;
+    font-size: clamp(.6rem, 2.5vw, 1rem);
+}
+
+.bubble{
+    background-color: var(--color-two);
+    border-radius: 50%;
+    padding: clamp(.4rem, 2.5vw, .6rem) clamp(.4rem, 2.7vw, 1rem);
+    color: #000;
+    cursor: pointer;
+    user-select: none;
+    margin: clamp(.3rem, .7vw, 1.2rem);
+    font-size: clamp(.6rem, 2.5vw, 1rem);
+}
+
+.bubbles{
+    display: flex;
+    align-items: center;
+    padding: 1rem 2.2rem;
+    flex-wrap: wrap;
+}
