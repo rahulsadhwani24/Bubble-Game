@@ -20,9 +20,11 @@ body{
 
 .Game{
     background-color: var(--color-one);
-    height: 75vh;
-    width: 75vw;
+    height: 78vh;
+    width: 80vw;
+    max-width: 1000px;
     position: relative;
+    overflow: hidden;
 }
 
 .start_end{
@@ -37,7 +39,8 @@ body{
 
 .controls{
     background-color: #3A3960;
-    height: 15%;
+    height: 5vw;
+    min-height: 10%;
     display: flex;
     color: #fff;
     display: flex;
@@ -62,20 +65,33 @@ body{
     font-size: clamp(.6rem, 2.5vw, 1rem);
 }
 
-.bubble{
-    background-color: var(--color-two);
-    border-radius: 50%;
-    padding: clamp(.4rem, 2.5vw, .6rem) clamp(.4rem, 2.7vw, 1rem);
-    color: #000;
-    cursor: pointer;
-    user-select: none;
-    margin: clamp(.3rem, .7vw, 1.2rem);
-    font-size: clamp(.6rem, 2.5vw, 1rem);
-}
-
 .bubbles{
     display: flex;
     align-items: center;
-    padding: 1rem 2.2rem;
+    justify-content: space-evenly;
+    padding: 12px 20px;
     flex-wrap: wrap;
+}
+
+.bubble{
+    background-color: var(--color-two);
+    border-radius: 50%;
+    padding: clamp(.3rem, 1.4vw, .6rem) clamp(.4rem, 2.7vw, 1rem);
+    color: #000;
+    cursor: pointer;
+    user-select: none;
+    margin: clamp(.45rem, .6vw, 1.5rem);
+    font-size: clamp(.9rem, 3vw, 1rem);
+}
+
+@media only screen and (max-width: 600px) {
+    .bubble{
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-height: 650px) {
+    .Game{
+        max-height: 550px;
+    }
 }
