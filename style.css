@@ -20,7 +20,7 @@ body{
 
 .Game{
     background-color: var(--color-one);
-    height: 78vh;
+    height: 77vh;
     width: 80vw;
     max-width: 1000px;
     position: relative;
